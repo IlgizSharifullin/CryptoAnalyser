@@ -4,7 +4,7 @@ public class Strings {
     private static final String rus = "אבגדהו¸זחטיךכלםמןנסעףפץצקשרüת‎‏ÿ";
     private static final String eng = "qwertyuiopasdfghjklzxcvbnm";
     private static final String cyphers = "1234567890";
-    private static final String symbols = "!@#$%^&*()_-?><";
-    private static final String ALPHABET = rus + rus.toUpperCase() + eng + eng.toUpperCase()+ cyphers
+    private static final String symbols = "!@#$%^&*()_-?><;:\n ";
+    public static final String ALPHABET = rus + rus.toUpperCase() + eng + eng.toUpperCase()+ cyphers
             + cyphers.toUpperCase() + symbols;
 }
