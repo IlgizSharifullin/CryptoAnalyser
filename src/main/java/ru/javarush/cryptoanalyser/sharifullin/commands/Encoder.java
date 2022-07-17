@@ -21,7 +21,7 @@ public class Encoder implements Action {
         Path pathRead = Path.of(PathFinder.getRoot() + txtFile);
         Path pathWrite = Path.of(PathFinder.getRoot() + encryptedFile);
         try {
-            String read = Files.readString(pathRead).toUpperCase();
+            String read = Files.readString(pathRead);
             StringBuilder write = new StringBuilder();
             for (int i = 0; i < read.length(); i++) {
                 int numberofletter = ALPHABET.indexOf(read.charAt(i));
@@ -29,7 +29,7 @@ public class Encoder implements Action {
                 char value = ALPHABET.charAt(enVal);
                 write.append(value);
             }
-            Files.writeString(pathWrite, write.toString().toLowerCase());
+            Files.writeString(pathWrite, write.toString());
         } catch (IOException e) {
             throw new ApplicationException("IO error", e);
         }
