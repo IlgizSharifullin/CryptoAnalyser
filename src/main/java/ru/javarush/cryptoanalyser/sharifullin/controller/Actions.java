@@ -1,13 +1,15 @@
 package ru.javarush.cryptoanalyser.sharifullin.controller;
 
 import ru.javarush.cryptoanalyser.sharifullin.commands.Action;
+import ru.javarush.cryptoanalyser.sharifullin.commands.BrutForce;
 import ru.javarush.cryptoanalyser.sharifullin.commands.Decoder;
 import ru.javarush.cryptoanalyser.sharifullin.commands.Encoder;
 
 public enum Actions {
 
     ENCODE(new Encoder()),
-    DECODE(new Decoder());
+    DECODE(new Decoder()),
+    BRUT(new BrutForce());
 
     private final Action action;
 

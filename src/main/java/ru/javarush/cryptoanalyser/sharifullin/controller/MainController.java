@@ -11,7 +11,7 @@ public class MainController {
             Action action=Actions.find(command);
             return action.execute(parameters);
         } catch (ApplicationException e){
-            //TODO log file for exceptions
+
             return new Result(ResultCode.ERROR,e.getMessage());
         }
 
